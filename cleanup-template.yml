@@ -1,0 +1,35 @@
+---
+- name: A script to remove users, groups, and directories
+  hosts: localhost
+  become: true
+  vars:
+    users:
+      - "user1"
+      - "user2"
+      - "user3"
+    groups: 
+      - "group1"
+      - "group2"
+      - "group3"
+
+  tasks:
+    - name: Remove groups
+      group:
+        name: "{{ groups }}"
+        state: absent
+        remove: yes
+      loop: "{{ groups }}"
+
+    - name: Remove users
+      user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+      loop: "{{ users }}"
+
+    - name: Remove user home directories
+      file:
+        path: /home/"{{ users }}"
+        state: absent
+        remove: yes
+      loop: "{{ users }}"
