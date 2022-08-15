@@ -33,3 +33,10 @@
         state: absent
         remove: yes
       loop: "{{ users }}"
+      
+    - name: Remove mailbox file
+      file:
+        path: /var/spool/mail/"{{ users }}"
+        state: absent
+        remove: yes
+      loop: "{{ users }}"
