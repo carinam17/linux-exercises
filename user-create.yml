@@ -1,0 +1,11 @@
+---
+- name: Create a user using Ansible builtin user
+  hosts: localhost
+  become: true
+
+  tasks:
+   - name: Add the user and include comment, and uid
+     ansible.builtin.user:
+        name: username
+        comment: a comment
+        uid: number
