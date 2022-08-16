@@ -1,0 +1,28 @@
+---
+- name: A script to remove users
+  hosts: localhost
+  become: true
+  vars:
+    users:
+      - "ben"
+      - "cindy"
+      - "anna"
+    users:
+      - "accounting"
+      - "sales"
+      - "marketing"
+  tasks:
+    - name: Remove users
+      ansible.builtin.user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+      loop: "{{ users }}"
+
+    - name: Remove groups
+      ansible.builtin.group:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+      loop: "{{ groups }}"
+
