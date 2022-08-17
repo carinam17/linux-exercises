@@ -10,7 +10,7 @@
         dest: /home/vagrant/script-templates
         mode: 0644
         owner: vagrant
-        user:vagrant
+        user: vagrant
       loop:
        - make-directory-template.sh
        - copy-file-template.sh  
