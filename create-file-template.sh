@@ -16,7 +16,7 @@ echo "Enter the file you would like to create: "
 
 
 # Complete the script below
-    # - Create the file in the directory /home/vagrant/Documents/testing
+    # - Create the file in the directory /home/vagrant/
     # - Use the appropriate bash command
     # - Remember to include the appropriate directory path
     # - The variable is referenced with $
