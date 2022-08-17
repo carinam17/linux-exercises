@@ -17,7 +17,7 @@
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
         dest: /home/vagrant/scripts-templates
-        mode: 0664
+        mode: 0666
       loop:
        - remove-file-template.sh
        - copy-file-template.sh
