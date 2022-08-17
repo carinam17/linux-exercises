@@ -6,7 +6,7 @@
   tasks:
     - name: Create a directory if it does not exist
       ansible.builtin.file:
-         path: /home/vagrant/Documents/{{ item }}
+         path: /home/vagrant/{{ item }}
          state: directory
          mode: '0775'
       loop:
@@ -20,5 +20,8 @@
         dest: /home/vagrant/Documents/scripts-templates
         mode: 0664
       loop:
-       - remove-file-template
-       - rename-file-template   
+       - remove-file-template.sh
+       - copy-file-template.sh
+       - rename-file-template.sh
+       - make-directory-template.sh
+       
