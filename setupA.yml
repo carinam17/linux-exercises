@@ -30,3 +30,38 @@
         mode: 0664
         owner: vagrant
         group: vagrant
+
+    - name: Retrieve shell scripts
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/make-directory-template.sh
+        dest: /home/vagrant/script-templates
+        mode: 0664
+        owner: vagrant
+        group: vagrant
+        
+
+    - name: Retrieve shell scripts
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/move-file-template.sh
+        dest: /home/vagrant/script-templates
+        mode: 0664
+        owner: vagrant
+        group: vagrant
+        
+   
+    - name: Retrieve shell scripts
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/remove-file-template.sh
+        dest: /home/vagrant/script-templates
+        mode: 0664
+        owner: vagrant
+        group: vagrant  
+ 
+ 
+    - name: Retrieve shell scripts
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/rename-file-template.sh
+        dest: /home/vagrant/script-templates
+        mode: 0664
+        owner: vagrant
+        group: vagrant  
