@@ -6,9 +6,11 @@
   tasks:
     - name: Create a directory if it does not exist
       ansible.builtin.file:
-         path: /home/vagrant/Documents/{{ item }}
+         path: /home/vagrant/{{ item }}
          state: directory
-         mode: '0755'
+         mode: '0775'
+         user: vagrant
+         group: vagrant
       loop:
          - playbooks
          - script-templates
