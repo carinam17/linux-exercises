@@ -17,7 +17,7 @@
     - name: Retrieve script templates
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
-        dest: /home/vagrant/Documents/scripts-templates
+        dest: /home/vagrant/scripts-templates
         mode: 0664
       loop:
        - remove-file-template.sh
