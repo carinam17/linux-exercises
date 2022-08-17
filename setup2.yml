@@ -1,0 +1,14 @@
+---
+- name: Retrieve files for exercises
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Retrieve script templates
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
+        dest: /home/vagrant/Documents/scripts
+        mode: 0644
+      loop:
+       - part1.txt
+       - part2.txt    
