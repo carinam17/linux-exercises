@@ -7,8 +7,8 @@
     - name: Retrieve script templates
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
-        dest: /home/vagrant/Documents/scripts
+        dest: /home/vagrant/Documents/script-templates
         mode: 0644
       loop:
-       - part1.txt
-       - part2.txt    
+       - make-directory-template.sh
+       - copy-file-template.sh  
