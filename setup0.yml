@@ -1,0 +1,24 @@
+---
+- name: Retrieve setup playbooks
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+         path: /home/vagrant/Documents/{{ item }}
+         state: directory
+         mode: '0755'
+      loop:
+         - script-templates
+         - text-files
+         
+
+    - name: Retrieve script templates
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
+        dest: /home/vagrant/Documents/scripts-templates
+        mode: 0644
+      loop:
+       - remove-file-template
+       - rename-file-template   
