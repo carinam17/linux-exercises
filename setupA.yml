@@ -5,6 +5,7 @@
 
   tasks:
     - name: Create a directory if it does not exist
+      become: yes
       ansible.builtin.file:
          path: /home/vagrant/script-templates
          state: directory
