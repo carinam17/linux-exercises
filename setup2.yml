@@ -7,7 +7,7 @@
     - name: Retrieve script templates
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
-        dest: /home/vagrant/Documents/script-templates
+        dest: /home/vagrant/script-templates
         mode: 0644
         owner: vagrant
         user:vagrant
