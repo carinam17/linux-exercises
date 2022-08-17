@@ -1,0 +1,17 @@
+---
+- name: Create user for ACME Corporation
+  hosts: localhost
+  become: true  
+   
+   tasks:
+
+       - name: Create groups
+         ansible.builtin.group:
+            name: "{{ item.group }}"
+            state: present
+            gid: "{{ item.gid }}"
+
+         loop:
+          - { group: 'accounting', gid: '200' }
+          - { group: 'marketing', gid: '300' }
+          - { group: 'sales', gid: '400' }
