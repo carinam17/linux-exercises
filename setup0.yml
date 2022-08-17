@@ -1,7 +1,6 @@
 ---
 - name: Retrieve setup playbooks
   hosts: localhost
-  become: true
 
   tasks:
     - name: Create a directory if it does not exist
