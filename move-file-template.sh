@@ -3,7 +3,7 @@
 # Description - A shell script that will:"
     # - Accept a file name 
     # - Accept the name of the target directory
-    # - Create a copy of the file in the directory /home/vagrant/{target-directory}
+    # - Move the file to the irectory /home/vagrant/{target-directory}
  
 
 # A prompt for the file name
