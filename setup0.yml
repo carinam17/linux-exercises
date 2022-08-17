@@ -8,7 +8,7 @@
       ansible.builtin.file:
          path: /home/vagrant/Documents/{{ item }}
          state: directory
-         mode: '0755'
+         mode: '0775'
       loop:
          - script-templates
          - text-files
@@ -18,7 +18,7 @@
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
         dest: /home/vagrant/Documents/scripts-templates
-        mode: 0644
+        mode: 0664
       loop:
        - remove-file-template
        - rename-file-template   
