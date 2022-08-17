@@ -10,7 +10,7 @@
          path: /home/vagrant/script-templates
          state: directory
          mode: '0775'
-         user: vagrant
+         owner: vagrant
          group: vagrant
 
 
@@ -19,7 +19,7 @@
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/copy-file-template.sh
         dest: /home/vagrant/script-templates
         mode: 0664
-        user: vagrant
+        owner: vagrant
         group: vagrant
 
 
@@ -28,5 +28,5 @@
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/create-file-template.sh
         dest: /home/vagrant/script-templates
         mode: 0664
-        user: vagrant
+        owner: vagrant
         group: vagrant
