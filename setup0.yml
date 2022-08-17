@@ -8,6 +8,8 @@
          path: /home/vagrant/{{ item }}
          state: directory
          mode: '0775'
+         owner: vagrant
+         group: vagrant
       loop:
          - script-templates
          - text-files
@@ -18,6 +20,8 @@
         url: https://raw.githubusercontent.com/carinam17/linux-exercises/main/{{ item }}
         dest: /home/vagrant/scripts-templates
         mode: 0666
+        owner: vagrant
+        group: vagrant
       loop:
        - remove-file-template.sh
        - copy-file-template.sh
